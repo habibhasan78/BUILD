@@ -12,8 +12,8 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources",
 		glue={"com.Stepdafination"},
 		tags= {"@batch24"},
-		plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-		
+		plugin={"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
+		dryRun=false,
 		monochrome=true
 		
 		
@@ -21,6 +21,6 @@ import cucumber.api.junit.Cucumber;
 		
 		)
 
-public class Runner24 {
+public class Runner24  {
 
 }

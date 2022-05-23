@@ -15,7 +15,7 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
 public class Stepdefination {
-	 WebDriver driver;
+	WebDriver driver;
 	Home24Page obj;
 
 	@Given("^User go to orange HRM home page$")
@@ -38,15 +38,15 @@ public class Stepdefination {
 
 	@When("^User also type the password$")
 	public void user_also_type_the_password() throws Throwable {
-		//driver.findElement(By.xpath("//*[@id='txtPassword']")).sendKeys("admin123");
+		// driver.findElement(By.xpath("//*[@id='txtPassword']")).sendKeys("admin123");
 		obj.getPassword().sendKeys("admin123");
 
 	}
 
 	@Then("^user click on the login button$")
 	public void user_click_on_the_login_button() throws Throwable {
-		//driver.findElement(By.name("Submit")).click();
-       obj.getLoginBtn().click();
+		// driver.findElement(By.name("Submit")).click();
+		obj.getLoginBtn().click();
 	}
 
 	@Then("^User varify the welcome page$")
@@ -54,7 +54,7 @@ public class Stepdefination {
 		String expect = "Welcome";
 		String actule = obj.getWelcomeTxt().getText();
 		Assert.assertTrue("welcome message is not found", actule.contains(expect));
-    
+
 	}
 
 }
